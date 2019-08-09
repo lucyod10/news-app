@@ -1,3 +1,15 @@
+# News App
+
+This is a news website that compiles articles from a large variety of news sources into the one place.
+
+## Technologies
+
+- React for frontend
+- newsapi.org for the news article API
+
+
+---------
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
