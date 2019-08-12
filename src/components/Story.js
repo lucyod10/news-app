@@ -18,20 +18,20 @@ class Story extends Component {
 
   render () {
     return (
-      <div class="article">
-        <div class="tags">
+      <div className="article">
+        <div className="tags">
           <TagLabel colorTag="tagOne" />
           <TagLabel colorTag="tagTwo" />
           <TagLabel colorTag="tagThree" />
           <TagLabel colorTag="tagFour" />
         </div>
         <span class="title"><a href={this.state.linkTo}>{this.state.title}</a></span>
-        <img src={this.state.imageURL} class="featureimg" />
+        <img src={this.state.imageURL} className="featureimg" />
         <p>{this.state.content}</p>
-        <span class="end">
-          <span class="likes"><img src={ heart } />300</span>
-          <span class="comments"><img src={ comment } />300</span>
-          <span class="share"><img src={ share } /></span>
+        <span className="end">
+          <span className="likes"><img src={ heart } />300</span>
+          <span className="comments"><img src={ comment } />300</span>
+          <span className="share"><img src={ share } /></span>
         </span>
       </div>
     );

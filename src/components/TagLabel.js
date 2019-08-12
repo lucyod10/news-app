@@ -11,7 +11,7 @@ class TagLabel extends Component {
 
   render () {
     return (
-      <li class={`${this.state.color} tag selectTag`}>Tag</li>
+      <li className={`${this.state.color} tag selectTag`}>Tag</li>
     );
   };
 }

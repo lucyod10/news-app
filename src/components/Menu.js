@@ -15,11 +15,11 @@ class Menu extends Component {
 
   render () {
     return (
-      <div class="settings">
+      <div className="settings">
         <div>
-          <img class="icon" src={plus} />
-          <img class="icon" src={signin} />
-          <img class="icon" src={cog} />
+          <img className="icon" src={plus} />
+          <img className="icon" src={signin} />
+          <img className="icon" src={cog} />
         </div>
         <div id="accountUsername">
           <p><b>Username:</b> { this.state.username }</p>

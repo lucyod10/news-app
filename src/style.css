@@ -101,6 +101,10 @@ header p {
 	padding: 0;
 }
 
+label {
+	display: block;
+}
+
 .title {
 	font-family: 'Scope One', serif;
 	font-size: 26px;
@@ -241,6 +245,17 @@ header p {
   width: 30px;
   height: 30px;
   padding: 10px;
+}
+
+/* FILTERS ////////////////////////////////////////////////////////////////////*/
+
+.sources label {
+	display: inline-block;
+}
+
+.sources p {
+	display: block;
+	padding: 0;
 }
 
 /* ARTICLES ////////////////////////////////////////////////////////////////////*/

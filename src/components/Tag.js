@@ -21,7 +21,7 @@ class Tag extends Component {
   render () {
     const selected = this.state.clicked ? 'selectTag' : '';
     return (
-      <li class={`${this.state.color} tag ${ selected }`} onClick={this.selectTag} >Tag</li>
+      <li className={`${this.state.color} tag ${ selected }`} onClick={this.selectTag} >Tag</li>
     );
   };
 }

@@ -5,7 +5,7 @@ class Logo extends Component {
   render () {
     return (
       <div>
-      <h1 class="blue">News App</h1>
+      <h1 className="blue">News App</h1>
       <h2>News in the morning</h2>
       </div>
     );

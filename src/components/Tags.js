@@ -14,7 +14,7 @@ class Tags extends Component {
   }
   render () {
     return (
-      <div class="tags">
+      <div className="tags">
         <ul>
           <Tag colorTag="tagOne" />
           <Tag colorTag="tagTwo" />
