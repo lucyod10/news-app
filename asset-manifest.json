@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/news-app/static/css/main.93a083dd.chunk.css",
+    "main.js": "/news-app/static/js/main.b55cd1a1.chunk.js",
+    "main.js.map": "/news-app/static/js/main.b55cd1a1.chunk.js.map",
+    "runtime~main.js": "/news-app/static/js/runtime~main.dc36b5e3.js",
+    "runtime~main.js.map": "/news-app/static/js/runtime~main.dc36b5e3.js.map",
+    "static/js/2.34351e3f.chunk.js": "/news-app/static/js/2.34351e3f.chunk.js",
+    "static/js/2.34351e3f.chunk.js.map": "/news-app/static/js/2.34351e3f.chunk.js.map",
+    "index.html": "/news-app/index.html",
+    "precache-manifest.ec4e9c558552209a4f8449cbda734eb7.js": "/news-app/precache-manifest.ec4e9c558552209a4f8449cbda734eb7.js",
+    "service-worker.js": "/news-app/service-worker.js",
+    "static/css/main.93a083dd.chunk.css.map": "/news-app/static/css/main.93a083dd.chunk.css.map",
+    "static/media/cog.svg": "/news-app/static/media/cog.9f07a3df.svg",
+    "static/media/comment.svg": "/news-app/static/media/comment.f3545c3a.svg",
+    "static/media/heart.svg": "/news-app/static/media/heart.311b7fc9.svg",
+    "static/media/plus.svg": "/news-app/static/media/plus.b99e8ee2.svg",
+    "static/media/share.svg": "/news-app/static/media/share.02f3d23f.svg",
+    "static/media/sign-in.svg": "/news-app/static/media/sign-in.f004e825.svg",
+    "static/media/sign-out.svg": "/news-app/static/media/sign-out.144ff030.svg",
+    "static/media/sliders.svg": "/news-app/static/media/sliders.89b1718e.svg",
+    "static/media/sync.svg": "/news-app/static/media/sync.b1b03f76.svg"
+  }
+}
