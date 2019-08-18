@@ -18,3 +18,8 @@ This project was created in React, and was an experiment in re-creating a previo
 Clone this repo, and then run `npm install` to install all dependencies.
 
 To view locally, run `npm run start` and visit the localhost given (typically `localhost:3000`)
+
+## TODO
+
+- Implement tag system for additional filtering.
+- form refreshes when filtering for the first time- keep values set.
