@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Story from './Story';
 import '../style.css';
+import Collapse from '@kunukn/react-collapse';
+import sliders from '../images/icons/sliders.svg'
 
 class FilterForm extends Component {
   constructor () {
@@ -13,7 +15,9 @@ class FilterForm extends Component {
 
       filterVariables: [],
       isLoaded: false,
-      articles: ""
+      articles: "",
+
+      isOpen: false
     }
 
     this.requestURL = this.requestURL.bind(this);
@@ -22,6 +26,8 @@ class FilterForm extends Component {
     this._handleInputSources = this._handleInputSources.bind(this);
     this._handleInputSortBy = this._handleInputSortBy.bind(this);
     this.filterStringEdit = this.filterStringEdit.bind(this);
+    this.animateFilter = this.animateFilter.bind(this);
+
   }
 
   requestURL () {
@@ -127,38 +133,61 @@ class FilterForm extends Component {
     });
   }
 
+  animateFilter() {
+    // animate the accordion state of the filters menu using isOpen, which connects to the Collapse object rendered.
+    this.setState({isOpen: this.state.isOpen ? false : true});
+  }
+
   render () {
     // the for="" for each label must correspond with a key from the `variables` object in the above requestURL function
       return (
-        <form onSubmit={this._handleSubmit}>
+        <div>
+          <form onSubmit={this._handleSubmit} className="filterForm">
+            <div className="filterHeader filterSection">
+              <div className="filterTitle">
+                <span />
+                Filters:
+                <span />
+              </div>
 
-          <label htmlFor="query">
-            <p>Search:</p>
-            <input type="search" id="query" onInput={ this._handleInputSearch } />
-          </label>
-          <label htmlFor="sources" className="sources">
-            <p>Sources:</p>
-            <input type="checkbox" value="abc-news-au" onInput={ this._handleInputSources } />
-            <label htmlFor="bbc">ABC News</label>
-            <input type="checkbox" value="cnn" onInput={ this._handleInputSources } />
-            <label htmlFor="bbc">CNN</label>
-            <input type="checkbox" value="independent" onInput={ this._handleInputSources } />
-            <label htmlFor="bbc">Independent</label>
-            <input type="checkbox" value="the-huffington-post" onInput={ this._handleInputSources } />
-            <label htmlFor="bbc">The Huffington Post</label>
-            <input type="checkbox" value="the-washington-times" onInput={ this._handleInputSources } />
-            <label htmlFor="bbc">The Wasington Times</label>
-          </label>
-          <label htmlFor="sortBy">
-            <p>Sort By:</p>
-            <select name="sortBy" onInput={ this._handleInputSortBy }>
-              <option value="publishedAt">Most Recent</option>
-              <option value="popularity">Popularity</option>
-              <option value="relevancy">Relevancy</option>
-            </select>
-          </label>
-            <input type="submit" value="Filter" />
-        </form>
+              <div className="reset">
+                <span />
+                <span onClick={ this.animateFilter }><img src={ sliders } className="icon"/></span>
+                <span />
+              </div>
+            </div>
+            <Collapse isOpen={ this.state.isOpen }>
+              <label htmlFor="query" className="filterSection" >
+                <span>Search:</span>
+                <input type="search" id="query" results="5" onInput={ this._handleInputSearch } />
+              </label>
+              <label htmlFor="sources" className="sources filterSection">
+                <span>Sources:</span>
+                <input type="checkbox" id="bbc" value="abc-news-au" onInput={ this._handleInputSources } />
+                <label htmlFor="bbc">ABC News</label>
+                <input type="checkbox" id="cnn" value="cnn" onInput={ this._handleInputSources } />
+                <label htmlFor="cnn">CNN</label>
+                <input type="checkbox" id="independent" value="independent" onInput={ this._handleInputSources } />
+                <label htmlFor="independent">Independent</label>
+                <input type="checkbox" id="huffington" value="the-huffington-post" onInput={ this._handleInputSources } />
+                <label htmlFor="huffington">The Huffington Post</label>
+                <input type="checkbox" id="washington" value="the-washington-times" onInput={ this._handleInputSources } />
+                <label htmlFor="washington">The Wasington Times</label>
+              </label>
+              <label htmlFor="sortBy" className="filterSection">
+                <span>Sort By:</span>
+                <select name="sortBy" onInput={ this._handleInputSortBy }>
+                  <option value="publishedAt">Most Recent</option>
+                  <option value="popularity">Popularity</option>
+                  <option value="relevancy">Relevancy</option>
+                </select>
+              </label>
+              <label className="filterSection submitForm">
+                <input type="submit" value="Filter" />
+              </label>
+            </Collapse>
+          </form>
+        </div>
       )
     }
   };

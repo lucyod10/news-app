@@ -126,7 +126,9 @@ label {
   width: 15px;
   height: 15px;
   padding: 10px;
+	color: limegreen;
 }
+
 
 .settings i {
 	margin: 0px 0.5em;
@@ -249,13 +251,92 @@ label {
 
 /* FILTERS ////////////////////////////////////////////////////////////////////*/
 
-.sources label {
-	display: inline-block;
+.filterForm {
+	background-color: white;
+	border-radius: 3px;
+	border: 1px solid #ccc;
 }
 
-.sources p {
+.filterHeader {
+	display: grid;
+	grid-template-columns: auto auto;
+}
+
+.filterHeader .reset {
+	text-align: right;
+}
+
+.filterTitle,
+.reset {
+	display: grid;
+	grid-template-rows: 1fr auto 1fr;
+}
+
+.filterSection {
+	border-bottom: 1px solid #ccc;
+	padding: 15px 20px;
+}
+
+.filterSection .submitForm {
+	border-bottom: 0px solid white;
+}
+
+.sources label {
+	border: 1px solid #ccc;
+	background-color: #eee;
+	color: #ccc;
+	margin: 5px;
+	padding: 10px 10px;
+	border-radius: 3px;
+	display: inline-block;
+	height: 0.8em;
+}
+
+.sources span {
 	display: block;
 	padding: 0;
+}
+
+.sources input {
+	display: none;
+}
+
+.sources input:hover + label {
+	border: 1px solid #b5b5b5;
+	background-color: #e0e0e0;
+	color: #b5b5b5;
+}
+
+.sources input:checked + label {
+	background-color: #aef3f7;
+	border: 1px solid #86c4c7;
+	color: #86c4c7;
+}
+
+.sources input:checked:hover + label {
+	background-color: #9eecf0;
+	border: 1px solid #6ca8ab;
+	color: #6ca8ab;
+}
+
+input[type="search"],
+select {
+	cursor: pointer;
+	margin: 0 20px;
+}
+
+select {
+	font-size: 1em;
+}
+
+.reset span {
+	cursor: pointer;
+}
+
+
+.collapse-css-transition {
+  transition: height 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
 }
 
 /* ARTICLES ////////////////////////////////////////////////////////////////////*/
@@ -439,7 +520,9 @@ textarea::placeholder {
 /* FOOTER ////////////////////////////////////////////////////////////////////*/
 
 footer {
-	margin: 20px 0;
+	margin: 20px 0 40px 0;
+	padding-top: 30px;
+	border-top: 1px solid #ccc;
 }
 
 footer ul {
